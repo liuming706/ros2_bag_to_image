@@ -33,8 +33,9 @@ The images are exported in lossless PNG format.
 How to launch:
 ```bash
 $ ros2 launch ros2_bag_to_image bag_to_image.xml \
-        input/path:=/PATH_TO/input_bag/ \
-        input/topics:="['camera1/image_rawcompressed', 'camera2/image_raw']"
+        input/path:=${HOME}/workspace/datasets/rosbag2_2024_10_22-12_14_17_0.mcap \
+        input/topics:="['/sensor/camera/stereo_left/image/raw', '/sensor/camera/stereo_right/image/raw']" \
+        output/path:=${HOME}/workspace/datasets/rosbag2_2024_10_22-12_14_17_0
 ```
 
 ### Parameters
